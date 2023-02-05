@@ -64,9 +64,6 @@ func (app *application) snippetView(w http.ResponseWriter, r *http.Request) {
 	data := app.newTemplateData(r)
 	data.Snippet = snippet
 
-	// Pass the flash message to the template.
-	data.Flash = flash
-
 	app.render(w, http.StatusOK, "view.tmpl", data)
 
 }
